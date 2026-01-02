@@ -1,6 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import { Code2, ChevronRight, ChevronLeft, Github, Linkedin, Mail, Menu, X, Sparkles, ExternalLink, ArrowRight, Play, Award, Rocket } from 'lucide-react';
+import { NavLink} from "react-router-dom";
 
 //header for all pages, lots of Tailwind going on here
 export function Header() {
@@ -27,7 +28,7 @@ export function Header() {
           <a href="https://github.com" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
             <Github className="w-5 h-5 text-gray-600" />
           </a>
-          <a href="https://linkedin.com" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
+          <a href="https://Linkedin.com" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
             <Linkedin className="w-5 h-5 text-gray-600" />
           </a>
           <a href="mailto:mikeweaverg@gmail.com" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
@@ -40,7 +41,7 @@ export function Header() {
 }
 
 //Navbar hides on mobile
-export function Navbar({setPage, page}) {
+export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const buttonClass = (isActive) => 
@@ -55,15 +56,15 @@ export function Navbar({setPage, page}) {
       {/* Desktop*/}
       <nav className="hidden md:block fixed top-[73px] md:top-[92px] left-0 w-full bg-white/80 backdrop-blur-lg shadow-sm z-40 border-b border-gray-100">
         <div className="flex items-center gap-2 px-4 md:px-8 py-1.5 max-w-7xl mx-auto">
-          <button className={buttonClass(page === "Projects")} onClick={() => setPage("Projects")}>
+          <NavLink to="/projects" className={({ isActive }) => buttonClass(isActive)}>
             Featured Projects
-          </button>
-          <button className={buttonClass(page === "About")} onClick={() => setPage("About")}>
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => buttonClass(isActive)}>
             Resume & About
-          </button>
-          <button className={buttonClass(page === "Demos")} onClick={() => setPage("Demos")}>
+          </NavLink>
+          <NavLink to="/demos" className={({ isActive }) => buttonClass(isActive)}>
             Project Demos
-          </button>
+          </NavLink>
         </div>
       </nav>
 
@@ -78,67 +79,70 @@ export function Navbar({setPage, page}) {
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 top-[73px] bg-black/50 z-40" onClick={() => setMobileMenuOpen(false)}>
-          <div className="bg-white w-64 h-full shadow-xl p-4 space-y-2" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-white w-70 h-full shadow-xl p-4 space-y-2" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-center mt-4">
-             <Sparkles className=" w-3.5 h-3.5 mr-2 mt-1 mb-1 text-emerald-600"/>
-             <p className="text-sm font-bold text-gray-300 uppercase tracking-wider mb-3">Navigation</p>
-           </div>
-            
-            <button 
-              className={buttonClass(page === "Projects")} 
-              onClick={() => { setPage("Projects"); setMobileMenuOpen(false); }}
-            >
-              Featured Projects
-            </button>
-            <button 
-              className={buttonClass(page === "About")} 
-              onClick={() => { setPage("About"); setMobileMenuOpen(false); }}
-            >
-              Resume & About
-            </button>
-            <button 
-              className={buttonClass(page === "Demos")} 
-              onClick={() => { setPage("Demos"); setMobileMenuOpen(false); }}
-            >
-              Project Demos
-            </button>
+              <Sparkles className=" w-3.5 h-3.5 mr-2 mt-1 mb-1 text-emerald-600"/>
+              <p className="text-sm font-bold text-gray-300 uppercase tracking-wider mb-3">Navigation</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-1.5">
+              <NavLink
+                to="/projects" className={({ isActive }) => `${buttonClass(isActive)}`}
+                onClick={() => {setMobileMenuOpen(false); }}
+              >
+                Featured Projects
+              </NavLink>
+              <NavLink
+                to="/about" className={({ isActive }) => `${buttonClass(isActive)}`}
+                onClick={() => {setMobileMenuOpen(false); }}
+              >
+                Resume & About
+              </NavLink>
+              <NavLink
+                to="/demos" className={({ isActive }) => `${buttonClass(isActive)}`}
+                onClick={() => {setMobileMenuOpen(false); }}
+              >
+                Project Demos
+              </NavLink>
+            </div>
             
             <div className="pt-4 mt-4 border-t border-gray-200">
               <div className="flex justify-center">
                 <Sparkles className=" w-3.5 h-3.5 mr-2 mt-1 mb-2 text-emerald-600"/>
                 <p className="text-sm font-bold text-gray-300 uppercase tracking-wider mb-3">Projects</p>
               </div>
-              <button 
-                className={buttonClass(page === "CensusView")} 
-                onClick={() => { setPage("CensusView"); setMobileMenuOpen(false); }}
-              >
-                CensusView
-              </button>
-              <button 
-                className={buttonClass(page === "Voyage")} 
-                onClick={() => { setPage("Voyage"); setMobileMenuOpen(false); }}
-              >
-                Voyage
-              </button>
-              <button 
-                className={buttonClass(page === "AIChef")} 
-                onClick={() => { setPage("AIChef"); setMobileMenuOpen(false); }}
-              >
-                AI Chef
-              </button>
-              <button 
-                className={buttonClass(page === "SpotifyLab")} 
-                onClick={() => { setPage("SpotifyLab"); setMobileMenuOpen(false); }}
-              >
-                SpotifyLab
-              </button>
+              <div className="flex flex-wrap justify-center gap-1.5">
+                <NavLink
+                  to="/projects/censusview" className={({ isActive }) => `${buttonClass(isActive)} block`}
+                  onClick={() => {setMobileMenuOpen(false); }}
+                >
+                  CensusView
+                </NavLink>
+                <NavLink
+                  to="/projects/voyage" className={({ isActive }) => `${buttonClass(isActive)} block`}
+                  onClick={() => {setMobileMenuOpen(false); }}
+                >
+                  Voyage
+                </NavLink>
+                <NavLink
+                  to="/projects/aichef" className={({ isActive }) => `${buttonClass(isActive)} block`}
+                  onClick={() => {setMobileMenuOpen(false); }}
+                >
+                  AI Chef
+                </NavLink>
+                <NavLink
+                  to="/projects/spotifylab" className={({ isActive }) => `${buttonClass(isActive)} block`}
+                  onClick={() => {setMobileMenuOpen(false); }}
+                >
+                  SpotifyLab
+                </NavLink>
+              </div>
             </div>
 
             <div className="pt-4 mt-4 border-t border-gray-200 flex gap-3 justify-center">
               <a href="https://github.com/MikeWeaver-dev" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg">
                 <Github className="w-5 h-5 text-gray-600" />
               </a>
-              <a href="https://www.linkedin.com/in/mikeweaverg/" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg">
+              <a href="https://www.Linkedin.com/in/mikeweaverg/" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg">
                 <Linkedin className="w-5 h-5 text-gray-600" />
               </a>
               <a href="mailto:mikeweaverg@gmail.com" className="p-2 hover:bg-emerald-100 rounded-lg">
@@ -153,14 +157,14 @@ export function Navbar({setPage, page}) {
 }
 
 //only really shows for desktop. I just wanted to try using a sidebar I've never done it before
-export function Sidebar({ setPage, page }) {
+export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const buttonClass = (isActive) => 
-    `w-full text-left px-4 py-3 rounded-xl font-medium transition-all group ${
+    `w-full text-left px-4 py-3 rounded-xl font-medium transition-all flex justify-left gap-6 justify-between  ${
       isActive 
         ? 'bg-gradient-to-r from-emerald-400 to-emerald-500 text-white shadow-lg shadow-emerald-200'
-        : 'text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 hover:translate-x-1'
+        : 'text-gray-700 hover:bg-emerald-50 hover:text-emerald-700'
     }`;
 
   return (
@@ -170,55 +174,55 @@ export function Sidebar({ setPage, page }) {
         isOpen ? 'translate-x-0' : '-translate-x-64'
       }`}>
         {/* Sidebar */}
-        <aside className="h-[calc(100vh-145px)] w-64 bg-white border-r border-gray-200 shadow-xl overflow-y-auto">
+        <aside className="h-[calc(100vh-145px)] w-64 bg-white border-r border-gray-200 shadow-xl overflow-y-auto overflow-x-hidden">
           <div className="p-5 space-y-2">
             <div className="mb-6">
-            <div className="flex justify-left">
-                <Sparkles className=" w-3.5 h-3.5 mr-1 mt-.5 mb-2 text-emerald-600"/>
+              <div className="flex justify-left">
+                <Sparkles className="w-3.5 h-3.5 mr-1 mt-.5 mb-2 text-emerald-600"/>
                 <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider px-1 mb-1">Portfolio</h3>
               </div>
               <div className="h-1 w-12 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full"></div>
             </div>
             
-            <button 
-              className={buttonClass(page === 'CensusView')} 
-              onClick={() => setPage('CensusView')}
+            <NavLink 
+              to="/projects/censusview" 
+              className={({ isActive }) => `${buttonClass(isActive)} group`}
             >
-              <span className="flex items-center justify-between">
+              <span className="">
                 CensusView
-                <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </span>
-            </button>
+              <ChevronRight className="mt-1 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </NavLink>
             
-            <button 
-              className={buttonClass(page === 'Voyage')} 
-              onClick={() => setPage('Voyage')}
+            <NavLink
+              to="/projects/voyage" 
+              className={({ isActive }) => `${buttonClass(isActive)} group`}
             >
-              <span className="flex items-center justify-between">
-                Voyage
-                <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span className="">
+                Voyage 
               </span>
-            </button>
+              <ChevronRight className="mt-1 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </NavLink>
             
-            <button 
-              className={buttonClass(page === 'AIChef')} 
-              onClick={() => setPage('AIChef')}
+            <NavLink 
+              to="/projects/aichef" 
+              className={({ isActive }) => `${buttonClass(isActive)} group`}
             >
-              <span className="flex items-center justify-between">
+              <span className="">
                 AI Chef
-                <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </span>
-            </button>
+              <ChevronRight className="mt-1 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </NavLink>
             
-            <button 
-              className={buttonClass(page === 'SpotifyLab')} 
-              onClick={() => setPage('SpotifyLab')}
+            <NavLink
+              to="/projects/spotifylab" 
+              className={({ isActive }) => `${buttonClass(isActive)} group`}
             >
-              <span className="flex items-center justify-between">
+              <span className="">
                 SpotifyLab
-                <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </span>
-            </button>
+                <ChevronRight className="mt-1 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </NavLink>
           </div>
         </aside>
 
@@ -250,9 +254,10 @@ export function ProjectCard({
   softColor,
   border,
   hover,
+  link,
   mobile = false,
-  appleLink,
-  playLink,
+  appleNavLink,
+  playNavLink,
   icon: Icon 
 }) {
   
@@ -270,13 +275,13 @@ export function ProjectCard({
                 <Icon className="w-6 h-6 text-white" />
               </div>
             )}
-            <button
-              onClick={onLearnMore}
+            <NavLink
+              to={link}
               className={`text-2xl font-bold text-gray-800 ${hover} transition-colors text-left group/title cursor-pointer`}
             >
               {title}
               <ArrowRight className="inline-block w-5 h-5 ml-2 opacity-0 group-hover/title:opacity-100 group-hover/title:translate-x-1 transition-all" />
-            </button>
+            </NavLink>
           </div>
         </div>
 
@@ -306,12 +311,12 @@ export function ProjectCard({
         <div className="mt-auto">
           {/* Actions */}
           <div className="flex gap-3 pt-4 justify-center border-t border-gray-100">
-            <button
-              onClick={onLearnMore}
+            <NavLink
+              to={link}
               className="flex-1 px-4 py-3 bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 text-gray-800 font-semibold rounded-xl transition-all transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
             >
               Learn More
-            </button>
+            </NavLink>
             <a
               href={liveUrl}
               target="_blank"
@@ -324,11 +329,11 @@ export function ProjectCard({
           </div>
 
           {/* Mobile App Store Badges – only if mobile=true */}
-          {mobile && (appleLink || playLink) && (
+          {mobile && (appleNavLink || playNavLink) && (
             <div className="flex justify-center gap-6 pt-6 mt-6 border-t border-gray-100">
-              {appleLink && (
+              {appleNavLink && (
                 <a
-                  href={appleLink}
+                  href={appleNavLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transform hover:scale-105 transition-transform duration-200 flex justify-center"
@@ -340,9 +345,9 @@ export function ProjectCard({
                   />
                 </a>
               )}
-              {playLink && (
+              {playNavLink && (
                 <a
-                  href={playLink}
+                  href={playNavLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transform hover:scale-105 transition-transform duration-200 flex justify-center"
@@ -379,8 +384,8 @@ export function ProjectPage({
   thumbnail,
   liveUrl,
   githubUrl,
-  appleLink,
-  playLink,
+  appleNavLink,
+  playNavLink,
   gradient,
   color,
   softColor,
@@ -451,7 +456,7 @@ export function ProjectPage({
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Quick NavLinks */}
         <div className="flex flex-wrap gap-4 mb-12 justify-center">
           <a
             href={liveUrl}
@@ -474,11 +479,11 @@ export function ProjectPage({
         </div>
 
         {/* App Store Badges */}
-        {(appleLink || playLink) && (
+        {(appleNavLink || playNavLink) && (
           <div className="flex flex-wrap gap-6 justify-center mb-12 pb-12 border-b border-gray-200">
-            {appleLink && (
+            {appleNavLink && (
               <a
-                href={appleLink}
+                href={appleNavLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transform hover:scale-105 transition-transform"
@@ -490,9 +495,9 @@ export function ProjectPage({
                 />
               </a>
             )}
-            {playLink && (
+            {playNavLink && (
               <a
-                href={playLink}
+                href={playNavLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transform hover:scale-105 transition-transform"

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { ProjectCard, ProjectPage } from './components';
 import { ChevronDown, ChevronRight, ExternalLink, Play, Download, Code2, Briefcase, GraduationCap, Award, Mail, MapPin, Calendar, Github, Linkedin, Phone, Rocket, Sparkles, Plane, Music, ChefHat  } from 'lucide-react';
+import { Link, useLocation } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 //I tried to use components here for re-useability. this is mostly props i pass to a component
-export function Projects({ setPage }) {
+export function Projects() {
   const projects = [
     {
       title: "CensusView",
@@ -11,6 +13,7 @@ export function Projects({ setPage }) {
       skills: ["R", "R-Shiny", "GIS Mapping", "Data Visualization", "Census API", "Data analysis"],
       liveUrl: "https://Mikeweaver.dev/CensusView",
       page: "CensusView",
+      link: "/projects/censusview",
       gradient: "from-green-300 to-green-400",
       color: "text-green-400",
       softColor: "bg-green-50",
@@ -27,6 +30,7 @@ export function Projects({ setPage }) {
       skills: ["React", "Firebase", "Realtime Database", "Authentication", "Cloud Storage", "Responsive Design"],
       liveUrl: "https://Mikeweaver.dev/Voyage",
       page: "Voyage",
+      link: "/projects/voyage",
       gradient: "from-red-300 to-red-400",
       color: "text-red-400",
       softColor: "bg-red-50",
@@ -43,6 +47,7 @@ export function Projects({ setPage }) {
       skills: ["React Native", "Expo", "OpenAI API", "Ai Integration", "Firebase", "NativeWind", "Mobile Development"],
       liveUrl: "https://Mikeweaver.dev/AIChef",
       page: "AIChef",
+      link: "/projects/aichef",
       gradient: "from-orange-300 to-orange-400",
       color: "text-orange-400",
       softColor: "bg-orange-50",
@@ -59,6 +64,7 @@ export function Projects({ setPage }) {
       skills: ["React Native", "Spotify API", "Mobile Development", "Expo", "OpenAI API", "AI Integration", "UI/UX"],
       liveUrl: "https://Mikeweaver.dev/SpotifyLab",
       page: "SpotifyLab",
+      link: "/projects/spotifylab",
       gradient: "from-purple-300 to-purple-400",
       color: "text-purple-400",
       softColor: "bg-purple-50",
@@ -100,7 +106,7 @@ export function Projects({ setPage }) {
               description={project.description}
               skills={project.skills}
               liveUrl={project.liveUrl}
-              onLearnMore={() => setPage(project.page)}
+              link={project.link}
               gradient={project.gradient}
               color={project.color}
               softColor={project.softColor}
@@ -133,12 +139,12 @@ export function Projects({ setPage }) {
               >
                 View on GitHub
               </a>
-              <button
-                onClick={() => setPage('About')}
+              <NavLink
+                to="/about"
                 className="px-6 py-3 bg-gradient-to-r from-emerald-300 to-emerald-400 text-white font-semibold rounded-xl hover:from-emerald-400 hover:to-emerald-500 transition-all shadow-lg"
               >
                 Learn More About Me
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -149,9 +155,9 @@ export function Projects({ setPage }) {
             <div className="text-3xl font-bold text-green-600 mb-1">4</div>
             <div className="text-sm text-green-700 font-medium">Major Projects</div>
           </div>
-          <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center border border-red-200">
-            <div className="text-3xl font-bold text-red-600 mb-1">10+</div>
-            <div className="text-sm text-red-700 font-medium">Languages, Frameworks, & Tools</div>
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center border border-blue-200">
+            <div className="text-3xl font-bold text-blue-600 mb-1">10+</div>
+            <div className="text-sm text-blue-700 font-medium">Languages, Frameworks, & Tools</div>
           </div>
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center border border-orange-200">
             <div className="text-3xl font-bold text-orange-600 mb-1">100%</div>
@@ -169,7 +175,7 @@ export function Projects({ setPage }) {
 }
 
 
-export function About({setPage}) {
+export function About() {
 
   const [isExperienceExpanded, setIsExperienceExpanded] = useState(false);
   const [isJourneyExpanded, setIsJourneyExpanded] = useState(false);
@@ -186,7 +192,7 @@ export function About({setPage}) {
             <p className="text-gray-600">Aspiring Software Developer</p>
           </div>
           <a 
-            href="/src/assets/Mike Weaver Resume.pdf" 
+            href="/src/assets/Michael Weaver Resume.pdf" 
             download
             className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
@@ -330,39 +336,39 @@ export function About({setPage}) {
                     January 2025 - Present
                   </span>
                 </div>
-                <button 
-                  onClick={() => setPage("CensusView")}
+                <NavLink
+                  to="/projects/censusview"
                   className="inline-block text-md font-semibold text-emerald-600 hover:text-emerald-800 hover:underline cursor-pointer transition-all duration-200 mb-2 focus:outline-none focus:underline"
                 >
                   CensusView
-                </button>
+                </NavLink>
                 <p className="text-gray-700 leading-relaxed mb-8">
                   CensusView is an interactive data tool that leverages Census API data to track and visualize millions of data points. The app is intuitive and simple for users, but offers complex data handling and geospatial manipulation behind the scenes.
                 </p>
-                <button 
-                  onClick={() => setPage("Voyage")}
+                <NavLink
+                  to="/projects/voyage"
                   className="inline-block text-md font-semibold text-emerald-600 hover:text-emerald-800 hover:underline cursor-pointer transition-all duration-200 mb-2 focus:outline-none focus:underline"
                 >
                   Voyage
-                </button>
+                </NavLink>
                 <p className="text-gray-700 leading-relaxed mb-8">
                   Voyage is a full-scale social media website geared towards travel. Users can create a profile, make posts, follow others, and like others' activity. Built using Firebase and offering dynamic updates and a robust third-party database, Voyage is ready to scale for an indefinite number of users and offers professional authentication and server-side capacity.
                 </p>
-                <button 
-                  onClick={() => setPage("AIChef")}
+                <NavLink
+                  to="/projects/aichef"
                   className="inline-block text-md font-semibold text-emerald-600 hover:text-emerald-800 hover:underline cursor-pointer transition-all duration-200 mb-2 focus:outline-none focus:underline"
                 >
                   AI Chef
-                </button>
+                </NavLink>
                 <p className="text-gray-700 leading-relaxed mb-8">
                   AI Chef is a GPT-4 powered recipe generator designed to inspire new meals based on foods users have on-hand. The app is optimized for web and mobile and available on both the App Store and Google Play Store. The app utilizes persistent data, Firebase authentication, Tailwind CSS, and mobile development frameworks to deliver something polished and professional across devices.
                 </p>
-                <button 
-                  onClick={() => setPage("SpotifyLab")}
+                <NavLink
+                  to="/projects/spotifylab"
                   className="inline-block text-md font-semibold text-emerald-600 hover:text-emerald-800 hover:underline cursor-pointer transition-all duration-200 mb-2 focus:outline-none focus:underline"
                 >
                   SpotifyLab
-                </button>
+                </NavLink>
                 <p className="text-gray-700 leading-relaxed mb-8">
                   SpotifyLab is a playlist generator for iOS, Android, and web that analyzes your Spotify listening history to create perfectly curated playlists. The app features AI integration, several APIs working in tandem, a third-party hosted backend, and a dynamic UI optimized for mobile and web.
                 </p>
@@ -538,7 +544,7 @@ export function About({setPage}) {
 }
 
 //I probably should have put the demo card function in the components page but I didn't feel like passing a million props again
-export function Demos({ setPage }) {
+export function Demos() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [expandedSkills, setExpandedSkills] = useState({});
 
@@ -558,7 +564,7 @@ export function Demos({ setPage }) {
       borderColor: "border-green-400",
       hoverGlow: "group-hover:shadow-green-500/20",
       icon: MapPin,
-      page: "CensusView"
+      page: "/projects/censusview"
     },
     {
       title: "Voyage",
@@ -575,7 +581,7 @@ export function Demos({ setPage }) {
       borderColor: "border-red-400",
       hoverGlow: "group-hover:shadow-red-500/20",
       icon: Plane,
-      page: "Voyage"
+      page: "/projects/voyage"
     },
     {
       title: "AI Chef",
@@ -592,7 +598,7 @@ export function Demos({ setPage }) {
       borderColor: "border-orange-400",
       hoverGlow: "group-hover:shadow-orange-500/20",
       icon: ChefHat,
-      page: "AIChef"
+      page: "/projects/aichef"
     },
     {
       title: "SpotifyLab",
@@ -609,7 +615,7 @@ export function Demos({ setPage }) {
       borderColor: "border-purple-400",
       hoverGlow: "group-hover:shadow-purple-500/20",
       icon: Music,
-      page: "SpotifyLab"
+      page: "/projects/spotifyLab"
     }
   ];
 
@@ -686,14 +692,14 @@ export function Demos({ setPage }) {
             <div className={`p-3 bg-gradient-to-br ${demo.gradient} rounded-xl shadow-lg flex-shrink-0`}>
               <Icon className="w-6 h-6 text-white" />
             </div>
-            <div className="flex-1">
-              <button
-                onClick={() => setPage(demo.page)}
+            <div className="flex-1 mt-2">
+              <NavLink
+                to= {demo.page}
                 className={`text-2xl font-bold ${demo.textColor} mt-2 mr-4 hover:underline underline-offset-4 text-left transition-all group/title`}
               >
                 {demo.title}
                 <ChevronRight className="inline-block w-6 h-6 ml-1 opacity-0 -translate-x-2 group-hover/title:opacity-100 group-hover/title:translate-x-0 transition-all" />
-              </button>
+              </NavLink>
             </div>
           </div>
 
@@ -801,8 +807,8 @@ export function Demos({ setPage }) {
               >
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
                 <div className="relative z-10">
-                  <div className="text-5xl mb-3">{tech.emoji}</div>
-                  <div className="font-bold text-white text-lg">{tech.name}</div>
+                  <div className="text-4xl mb-3">{tech.emoji}</div>
+                  <div className="font-bold text-white text-md">{tech.name}</div>
                 </div>
               </div>
             ))}
@@ -992,6 +998,51 @@ export function SpotifyLab(){
       <div className="h-[200px] md:h-[300px]"></div>
       <p className ="font-semibold mb-8 text-xl">
         🚧🚧🚧 SpotifyLab under construction and will be delivered January 31st 2026. 🚧🚧🚧
+      </p>
+      <h1 className ="text-lg"> 
+        Check back soon!
+      </h1>
+      <div className="h-[1300px] md:h-[400px]"></div>
+    </>
+  )
+}
+
+export function CensusViewRouting(){
+  return(
+    <>
+      <div className="h-[200px] md:h-[300px]"></div>
+      <p className ="font-semibold mb-8 text-xl">
+        🚧🚧🚧 CensusView is under construction and will be delivered January 15th 2026. 🚧🚧🚧
+      </p>
+      <h1 className ="text-lg"> 
+        Check back soon!
+      </h1>
+      <div className="h-[1300px] md:h-[400px]"></div>
+    </>
+  )
+}
+
+export function VoyageRouting(){
+  return(
+    <>
+      <div className="h-[200px] md:h-[300px]"></div>
+      <p className ="font-semibold mb-8 text-xl">
+        🚧🚧🚧 Voyage is under construction and will be delivered January 15th 2026. 🚧🚧🚧
+      </p>
+      <h1 className ="text-lg"> 
+        Check back soon!
+      </h1>
+      <div className="h-[1300px] md:h-[400px]"></div>
+    </>
+  )
+}
+
+export function AIChefRouting(){
+  return(
+    <>
+      <div className="h-[200px] md:h-[300px]"></div>
+      <p className ="font-semibold mb-8 text-xl">
+        🚧🚧🚧 Chef AI is under construction and will be delivered January 10th 2026. 🚧🚧🚧
       </p>
       <h1 className ="text-lg"> 
         Check back soon!
