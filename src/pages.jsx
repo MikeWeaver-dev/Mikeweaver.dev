@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ProjectCard, ProjectPage } from './components';
 import { ChevronDown, ChevronRight, ExternalLink, Play, Download, Code2, Briefcase, GraduationCap, Award, Mail, MapPin, Calendar, Github, Linkedin, Phone, Rocket, Sparkles, Plane, Music, ChefHat  } from 'lucide-react';
 
-
+//I tried to use components here for re-useability. this is mostly props i pass to a component
 export function Projects({ setPage }) {
   const projects = [
     {
@@ -168,6 +168,7 @@ export function Projects({ setPage }) {
   );
 }
 
+
 export function About({setPage}) {
 
   const [isExperienceExpanded, setIsExperienceExpanded] = useState(false);
@@ -178,7 +179,7 @@ export function About({setPage}) {
       <div className="h-[40px] md:h-[120px]"></div>
       <div className="max-w-4xl mx-auto">
         
-        {/* Header with Download Button */}
+        {/* Header with resume added in*/}
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
           <div>
             <h1 className="text-4xl md:text-4xl font-bold text-gray-800 mb-2">About Me</h1>
@@ -194,7 +195,7 @@ export function About({setPage}) {
           </a>
         </div>
 
-        {/* Bio Section */}
+        {/* I added a bio here*/}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
           <div className="flex items-center gap-3 mb-8">
             <div className="p-2 bg-emerald-100 rounded-lg">
@@ -210,7 +211,7 @@ export function About({setPage}) {
           </p>
         </div>
 
-        {/* Contact Info */}
+        {/* My contact info */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
           <h2 className="text-2xl font-bold text-gray-800 mb-8">Contact Information</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -251,7 +252,7 @@ export function About({setPage}) {
           </div>
         </div>
 
-        {/* Skills Section – Centered on Mobile Only */}
+        {/* Skills section with different formatting for mobile */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
           <div className="flex items-center justify-left md:justify-start gap-3 mb-8">
             <div className="p-2 bg-emerald-100 rounded-lg">
@@ -305,7 +306,7 @@ export function About({setPage}) {
           </div>
         </div>
 
-        {/* Experience Section - Collapsible */}
+        {/* Experience section got too big so i made it collapse if needed */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-emerald-100 rounded-lg">
@@ -429,7 +430,7 @@ export function About({setPage}) {
           </div>
         </div>
 
-        {/* My Journey Section - Collapsible */}
+        {/* My journey is a bit casual but whatever*/}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-emerald-100 rounded-lg">
@@ -471,7 +472,7 @@ export function About({setPage}) {
             </div>
           </div>
 
-          {/* Expand Button for My Journey */}
+          {/* Expand button*/}
           <div className="text-center mt-4">
             <button
               onClick={() => setIsJourneyExpanded(!isJourneyExpanded)}
@@ -507,7 +508,7 @@ export function About({setPage}) {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Feels like a natural end */}
         <div className="bg-gradient-to-r from-emerald-300 to-emerald-400 rounded-2xl shadow-xl p-8 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Thanks for viewing my portfolio!</h2>
           <p className="text-emerald-50 mb-6 text-lg">
@@ -536,7 +537,7 @@ export function About({setPage}) {
   );
 }
 
-
+//I probably should have put the demo card function in the components page but I didn't feel like passing a million props again
 export function Demos({ setPage }) {
   const [activeVideo, setActiveVideo] = useState(null);
   const [expandedSkills, setExpandedSkills] = useState({});
@@ -629,23 +630,23 @@ export function Demos({ setPage }) {
         <div className="relative aspect-video overflow-hidden bg-gray-900">
           {!isPlaying ? (
             <>
-              {/* Thumbnail */}
+              {/* Thumbnail was tricky*/}
               <img
                 src={demo.thumbnail}
                 alt={demo.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               
-              {/* Gradient Overlay */}
+              {/* Gradient overlay to try and get cool format on vid*/}
               <div className={`absolute inset-0 bg-gradient-to-br ${demo.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
               
-              {/* Play Button */}
+              {/* Play button */}
               <button
                 onClick={() => setActiveVideo(index)}
                 className="absolute inset-0 flex items-center justify-center z-10 group/play"
               >
                 <div className="relative">
-                  {/* Pulse ring */}
+                  {/* Pulse ring from ChatGPT*/}
                   <div className="absolute inset-0 bg-white rounded-full animate-ping opacity-20"></div>
                   {/* Button */}
                   <div className="relative bg-white/95 backdrop-blur-sm rounded-full p-6 shadow-2xl transition-all duration-300 group-hover/play:scale-110 group-hover/play:bg-white">
@@ -654,7 +655,7 @@ export function Demos({ setPage }) {
                 </div>
               </button>
 
-              {/* Video Tags - Subtle top left */}
+              {/* Video tags subtle on top left*/}
               <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-20">
                 {demo.videoTags.map((tag, i) => (
                   <span
@@ -703,7 +704,7 @@ export function Demos({ setPage }) {
             </p>
           </div>
 
-          {/* Tech Tags - Expandable */}
+          {/* More tags i guess */}
           <div className="mb-8 mt-6">
             <div className="flex flex-wrap gap-2">
               {demo.skills.map((skill, idx) => (
@@ -728,7 +729,7 @@ export function Demos({ setPage }) {
             )}
           </div>
 
-          {/* Action Buttons */}
+          {/* Button */}
           <div className="flex gap-3">
             <a
               href={demo.liveUrl}
@@ -750,7 +751,7 @@ export function Demos({ setPage }) {
           </div>
         </div>
 
-        {/* Accent line at bottom */}
+        {/* Accent line at bottom has a glitch one day I'll fix I don't think anyone will notice for now */}
         <div className={`h-1 bg-gradient-to-r ${demo.gradient}`}></div>
       </div>
     );
@@ -782,7 +783,7 @@ export function Demos({ setPage }) {
           ))}
         </div>
 
-        {/* Tech Stack Showcase */}
+        {/* Tech Stack */}
         <div className="bg-white rounded-3xl shadow-xl p-10 mb-12 border border-gray-100">
           <h2 className="text-2xl font-bold text-gray-700 mb-8 text-center">
             Built With Modern Tech
@@ -808,7 +809,7 @@ export function Demos({ setPage }) {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* End */}
         <div className="relative overflow-hidden bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 rounded-3xl shadow-2xl p-12 text-center text-white">
           {/* Animated background elements */}
           <div className="absolute top-0 left-0 w-full h-full">
@@ -850,6 +851,7 @@ export function Demos({ setPage }) {
 
 //////////////////////////////////////////////////////////
 
+//these all just call on a component
 export function CensusView() {
   return (
     <ProjectPage

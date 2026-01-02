@@ -2,6 +2,7 @@ import React from "react";
 import {useState} from "react";
 import { Code2, ChevronRight, ChevronLeft, Github, Linkedin, Mail, Menu, X, Sparkles, ExternalLink, ArrowRight, Play, Award, Rocket } from 'lucide-react';
 
+//header for all pages, lots of Tailwind going on here
 export function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-emerald-50 via-white to-emerald-50 backdrop-blur-md shadow-sm z-50 border-b border-emerald-100">
@@ -38,6 +39,7 @@ export function Header() {
   );
 }
 
+//Navbar hides on mobile
 export function Navbar({setPage, page}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -50,7 +52,7 @@ export function Navbar({setPage, page}) {
 
   return (
     <>
-      {/* Desktop Navbar */}
+      {/* Desktop*/}
       <nav className="hidden md:block fixed top-[73px] md:top-[92px] left-0 w-full bg-white/80 backdrop-blur-lg shadow-sm z-40 border-b border-gray-100">
         <div className="flex items-center gap-2 px-4 md:px-8 py-1.5 max-w-7xl mx-auto">
           <button className={buttonClass(page === "Projects")} onClick={() => setPage("Projects")}>
@@ -65,7 +67,7 @@ export function Navbar({setPage, page}) {
         </div>
       </nav>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile*/}
       <button
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         className="md:hidden fixed top-[85px] right-4 z-50 p-2 bg-white rounded-lg shadow-lg border border-emerald-100"
@@ -150,6 +152,7 @@ export function Navbar({setPage, page}) {
   );
 }
 
+//only really shows for desktop. I just wanted to try using a sidebar I've never done it before
 export function Sidebar({ setPage, page }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -231,8 +234,6 @@ export function Sidebar({ setPage, page }) {
           )}
         </button>
       </div>
-
-      {/* Content Spacer - Desktop Only */}
       <div className={`hidden md:block transition-all duration-300 ${isOpen ? 'ml-64' : 'ml-0'}`} />
     </>
   );
@@ -364,7 +365,7 @@ export function ProjectCard({
   );
 }
 
-// Add this to your components.jsx file
+//all the projects like heavy info page use this one.
 
 export function ProjectPage({
   title,
