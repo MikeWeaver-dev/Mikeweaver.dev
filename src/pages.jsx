@@ -27,11 +27,11 @@ export function Projects({ setPage }) {
       skills: ["React", "Firebase", "Realtime Database", "Authentication", "Cloud Storage", "Responsive Design"],
       liveUrl: "https://Mikeweaver.dev/Voyage",
       page: "Voyage",
-      gradient: "from-purple-300 to-purple-400",
-      color: "text-purple-400",
-      softColor: "bg-purple-50",
-      border: "border-purple-400",
-      hover: "hover:text-purple-400",
+      gradient: "from-red-300 to-red-400",
+      color: "text-red-400",
+      softColor: "bg-red-50",
+      border: "border-red-400",
+      hover: "hover:text-red-400",
       mobile: false,
       appleLink: "https://Mikeweaver.dev/Voyage",
       playLink: "https://Mikeweaver.dev/Voyage",
@@ -59,11 +59,11 @@ export function Projects({ setPage }) {
       skills: ["React Native", "Spotify API", "Mobile Development", "Expo", "OpenAI API", "AI Integration", "UI/UX"],
       liveUrl: "https://Mikeweaver.dev/SpotifyLab",
       page: "SpotifyLab",
-      gradient: "from-blue-300 to-blue-400",
-      color: "text-blue-400",
-      softColor: "bg-blue-50",
-      border: "border-blue-400",
-      hover: "hover:text-blue-400",
+      gradient: "from-purple-300 to-purple-400",
+      color: "text-purple-400",
+      softColor: "bg-purple-50",
+      border: "border-purple-400",
+      hover: "hover:text-purple-400",
       mobile: true,
       appleLink: "https://Mikeweaver.dev/SpotifyLab",
       playLink: "https://Mikeweaver.dev/SpotifyLab",
@@ -149,17 +149,17 @@ export function Projects({ setPage }) {
             <div className="text-3xl font-bold text-green-600 mb-1">4</div>
             <div className="text-sm text-green-700 font-medium">Major Projects</div>
           </div>
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center border border-purple-200">
-            <div className="text-3xl font-bold text-purple-600 mb-1">10+</div>
-            <div className="text-sm text-purple-700 font-medium">Languages, Frameworks, & Tools</div>
+          <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center border border-red-200">
+            <div className="text-3xl font-bold text-red-600 mb-1">10+</div>
+            <div className="text-sm text-red-700 font-medium">Languages, Frameworks, & Tools</div>
           </div>
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center border border-orange-200">
             <div className="text-3xl font-bold text-orange-600 mb-1">100%</div>
             <div className="text-sm text-orange-700 font-medium">Responsive</div>
           </div>
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center border border-blue-200">
-            <div className="text-3xl font-bold text-blue-600 mb-1">Open</div>
-            <div className="text-sm text-blue-700 font-medium">Source</div>
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center border border-purple-200">
+            <div className="text-3xl font-bold text-purple-600 mb-1">Open</div>
+            <div className="text-sm text-purple-700 font-medium">Source</div>
           </div>
         </div>
 
@@ -536,143 +536,137 @@ export function About({setPage}) {
   );
 }
 
+
 export function Demos({ setPage }) {
+  const [activeVideo, setActiveVideo] = useState(null);
   const [expandedSkills, setExpandedSkills] = useState({});
 
   const demos = [
     {
       title: "CensusView",
-      description: "Interactive data visualization platform that maps millions of Census data points to reveal demographic and housing trends across state, county, and neighborhood levels. Utilizes the Census API and sophisticated data manipulation to offer dynamic filters, point-in-time, and change-over-time data.",
+      description: "Interactive data visualization platform that maps millions of Census data points to reveal demographic and housing trends across state, county, and neighborhood levels.",
       skills: ["R", "R-Shiny", "GIS Mapping", "Data Visualization", "Census API", "Data Analysis"],
+      videoTags: ["Data Visualization", "Census API"],
       liveUrl: "https://Mikeweaver.dev/CensusView",
       githubUrl: "https://github.com/MikeWeaver-dev/CensusView",
       videoFile: "CensusView.mp4",
       thumbnail: "/src/assets/thumbnails/CensusView Thumbnail.png",
-      gradient: "from-green-300 to-green-400",
-      color: "text-emerald-500",
-      softColor: "bg-green-50",
-      border: "border-green-400",
-      hoverBorder: "hover:border-green-600",
-      shadow: "hover:shadow-green-400/30",
-      mobile: false,
-      topTags: ["Data Visualization", "Census API"],
+      gradient: "from-green-400 to-emerald-500",
+      accentColor: "bg-green-500",
+      textColor: "text-green-600",
+      borderColor: "border-green-400",
+      hoverGlow: "group-hover:shadow-green-500/20",
       icon: MapPin,
       page: "CensusView"
     },
     {
       title: "Voyage",
-      description: "Full-service social media platform designed for travelers to share experiences. Features real-time updates, image uploads, third-party server and database hosting, authentication, profiles, likes, posts, sub-posts and more.",
-      skills: ["React", "Firebase", "Realtime Database", "Authentication", "Cloud Storage", "Responsive Design", "CRUD Operations"],
+      description: "Full-service social media platform designed for travelers to share experiences. Features real-time updates, image uploads, authentication, and more.",
+      skills: ["React", "Firebase", "Realtime Database", "Authentication", "Cloud Storage", "Responsive Design"],
+      videoTags: ["CRUD Operations", "Firebase"],
       liveUrl: "https://Mikeweaver.dev/Voyage",
       githubUrl: "https://github.com/MikeWeaver-dev/Voyage",
       videoFile: "Voyage.mp4",
       thumbnail: "/src/assets/thumbnails/Voyage Thumbnail.png",
-      gradient: "from-purple-300 to-purple-400",
-      color: "text-purple-500",
-      softColor: "bg-purple-50",
-      border: "border-purple-400",
-      hoverBorder: "hover:border-purple-600",
-      shadow: "hover:shadow-purple-400/30",
-      mobile: false,
-      topTags: ["Firebase", "CRUD Operations"],
+      gradient: "from-red-400 to-pink-500",
+      accentColor: "bg-red-500",
+      textColor: "text-red-600",
+      borderColor: "border-red-400",
+      hoverGlow: "group-hover:shadow-red-500/20",
       icon: Plane,
       page: "Voyage"
     },
     {
       title: "AI Chef",
-      description: "AI powered recipe generator that uses GPT-4 to create personalized meal suggestions based on ingredients in the users pantry. Features a stunning UI and optimization for mobile and web, with availability on the Apple and Google Play store.",
-      skills: ["React Native", "Expo", "OpenAI API", "AI Integration", "Firebase", "NativeWind", "Mobile Development", "UI/UX"],
+      description: "AI powered recipe generator using GPT-4 to create personalized meal suggestions. Available on iOS, Android, and web.",
+      skills: ["React Native", "Expo", "OpenAI API", "AI Integration", "Firebase", "Mobile Development"],
+      videoTags: ["AI Integration", "Mobile"],
       liveUrl: "https://Mikeweaver.dev/AIChef",
       githubUrl: "https://github.com/MikeWeaver-dev/AIChef",
       videoFile: "AIChef.mp4",
       thumbnail: "/src/assets/thumbnails/AI Chef Thumbnail.png",
-      gradient: "from-orange-300 to-orange-400",
-      color: "text-orange-500",
-      softColor: "bg-orange-50",
-      border: "border-orange-400",
-      hoverBorder: "hover:border-orange-600",
-      shadow: "hover:shadow-orange-400/30",
-      mobile: true,
-      topTags: ["AI Integration", "React Native"],
+      gradient: "from-orange-400 to-red-500",
+      accentColor: "bg-orange-500",
+      textColor: "text-orange-600",
+      borderColor: "border-orange-400",
+      hoverGlow: "group-hover:shadow-orange-500/20",
       icon: ChefHat,
       page: "AIChef"
     },
     {
       title: "SpotifyLab",
-      description: "Playlist generator for iOS, Android, and web that analyzes your Spotify listening history to create perfectly curated playlists. Features AI integration, several APIs working in tandem, a third-party hosted backend, and a dynamic UI optimized for mobile and web.",
-      skills: ["React Native", "Spotify API", "OpenAI API", "AI Integration", "Expo", "Mobile Development", "UI/UX", "NativeWind"],
+      description: "Playlist generator that analyzes your Spotify listening history to create perfectly curated playlists with AI integration.",
+      skills: ["React Native", "Spotify API", "OpenAI API", "AI Integration", "Mobile Development"],
+      videoTags: ["Spotify API", "Mobile"],
       liveUrl: "https://Mikeweaver.dev/SpotifyLab",
       githubUrl: "https://github.com/MikeWeaver-dev",
       videoFile: "SpotifyLab.mp4",
       thumbnail: "/src/assets/thumbnails/SpotifyLab Thumbnail.png",
-      gradient: "from-blue-300 to-blue-400",
-      color: "text-blue-500",
-      softColor: "bg-blue-50",
-      border: "border-blue-400",
-      hoverBorder: "hover:border-blue-600",
-      shadow: "hover:shadow-blue-400/30",
-      mobile: true,
-      topTags: ["Mobile Development", "UI/UX"],
+      gradient: "from-purple-400 to-purple-600",
+      accentColor: "bg-purple-500",
+      textColor: "text-purple-600",
+      borderColor: "border-purple-400",
+      hoverGlow: "group-hover:shadow-purple-500/20",
       icon: Music,
       page: "SpotifyLab"
     }
   ];
 
   const DemoCard = ({ demo, index }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
     const Icon = demo.icon;
+    const isPlaying = activeVideo === index;
+    const isExpanded = expandedSkills[index];
 
     const toggleSkills = (e) => {
       e.stopPropagation();
       setExpandedSkills(prev => ({ ...prev, [index]: !prev[index] }));
-    };
-
-    const handlePlayClick = (e) => {
-      e.stopPropagation();
-      setIsPlaying(true);
+      setActiveVideo(null);
     };
 
     return (
-      <div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className={`
-          group bg-white rounded-2xl overflow-hidden 
-          border-2 border-gray-100 
-          transition-all duration-300
-          ${isHovered ? `${demo.hoverBorder} ${demo.shadow} shadow-xl -translate-y-1` : 'shadow-md'}
-        `}
-      >
-        <div className="relative h-64 overflow-hidden">
-          {!isPlaying && (
+      <div className={`group relative bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2 ${demo.hoverGlow} hover:shadow-2xl`}>
+        {/* Video Container */}
+        <div className="relative aspect-video overflow-hidden bg-gray-900">
+          {!isPlaying ? (
             <>
+              {/* Thumbnail */}
               <img
                 src={demo.thumbnail}
-                alt={`${demo.title} preview`}
-                className="w-full h-full object-cover brightness-90"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                }}
+                alt={demo.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className={`absolute inset-0 bg-gradient-to-r ${demo.gradient} blur-2xl opacity-50`} />
-              <div className="absolute inset-0 bg-black/10" />
-            </>
-          )}
-
-          {!isPlaying && (
-            <div className="absolute inset-0 flex items-center justify-center z-10">
+              
+              {/* Gradient Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${demo.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+              
+              {/* Play Button */}
               <button
-                onClick={handlePlayClick}
-                className="bg-white/20 backdrop-blur-md border border-white/30 rounded-full p-7 hover:bg-white/30 hover:scale-110 transition-all duration-300 shadow-2xl"
-                aria-label={`Play demo video for ${demo.title}`}
+                onClick={() => setActiveVideo(index)}
+                className="absolute inset-0 flex items-center justify-center z-10 group/play"
               >
-                <Play className="w-12 h-12 text-white fill-white" />
+                <div className="relative">
+                  {/* Pulse ring */}
+                  <div className="absolute inset-0 bg-white rounded-full animate-ping opacity-20"></div>
+                  {/* Button */}
+                  <div className="relative bg-white/95 backdrop-blur-sm rounded-full p-6 shadow-2xl transition-all duration-300 group-hover/play:scale-110 group-hover/play:bg-white">
+                    <Play className="w-10 h-10 text-gray-900 fill-gray-900" />
+                  </div>
+                </div>
               </button>
-            </div>
-          )}
 
-          {isPlaying && (
+              {/* Video Tags - Subtle top left */}
+              <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-20">
+                {demo.videoTags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 bg-black/40 backdrop-blur-md text-white text-xs font-medium rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </>
+          ) : (
             <video
               className="w-full h-full object-cover"
               controls
@@ -682,170 +676,173 @@ export function Demos({ setPage }) {
               Your browser does not support the video tag.
             </video>
           )}
-
-          <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-20">
-            {demo.topTags.map((tag, i) => (
-              <span key={i} className={`px-3 py-1 ${demo.softColor} ${demo.color} rounded-full text-xs font-semibold border ${demo.border}`}>
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <div className={`
-            absolute top-4 right-4 p-3 bg-white/90 backdrop-blur-sm rounded-xl 
-            border-2 transition-all duration-300 z-20
-            ${isHovered ? `${demo.border} scale-110 shadow-lg` : 'border-transparent'}
-          `}>
-            <Icon className={`w-6 h-6 ${demo.color}`} />
-          </div>
-
-          {demo.mobile && (
-            <div className="absolute bottom-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-700 border border-gray-200 z-20">
-              📱 Mobile App
-            </div>
-          )}
         </div>
 
-        <div className="p-6">
-          <button
-            onClick={() => setPage(demo.page)}
-            className={`
-              text-2xl font-bold mb-3 justify-center w-full focus:outline-none
-              ${demo.color} 
-              hover:${demo.color.replace('700', '800')} 
-              hover:underline 
-              underline-offset-4 
-              transition-all duration-300
-            `}
-          >
-            {demo.title}
-          </button>
+        {/* Content */}
+        <div className="p-8">
+          {/* Icon & Title */}
+          <div className="flex items-start gap-4 mb-4">
+            <div className={`p-3 bg-gradient-to-br ${demo.gradient} rounded-xl shadow-lg flex-shrink-0`}>
+              <Icon className="w-6 h-6 text-white" />
+            </div>
+            <div className="flex-1">
+              <button
+                onClick={() => setPage(demo.page)}
+                className={`text-2xl font-bold ${demo.textColor} mt-2 mr-4 hover:underline underline-offset-4 text-left transition-all group/title`}
+              >
+                {demo.title}
+                <ChevronRight className="inline-block w-6 h-6 ml-1 opacity-0 -translate-x-2 group-hover/title:opacity-100 group-hover/title:translate-x-0 transition-all" />
+              </button>
+            </div>
+          </div>
 
-          <p className="text-gray-700 leading-relaxed mb-6">
-            {demo.description}
-          </p>
+          {/* Description */}
+          <div className="flex-1 flex items-start hidden md:block">
+            <p className="text-gray-600 leading-relaxed">
+              {demo.description}
+            </p>
+          </div>
 
-          <div className="mb-6">
+          {/* Tech Tags - Expandable */}
+          <div className="mb-8 mt-6">
             <div className="flex flex-wrap gap-2">
               {demo.skills.map((skill, idx) => (
                 <span
                   key={idx}
-                  className={`px-3 py-1 ${demo.softColor} ${demo.color} rounded-full text-xs font-medium border ${demo.border} ${expandedSkills[index] || idx < 4 ? '' : 'hidden'}`}
+                  className={`px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium transition-all border-1 border-gray-200 ${
+                    !isExpanded && idx >= 3 ? 'hidden' : ''
+                  }`}
                 >
                   {skill}
                 </span>
               ))}
             </div>
-            {demo.skills.length > 4 && (
+            {demo.skills.length > 3 && (
               <button
                 onClick={toggleSkills}
-                className="mt-3 text-sm font-medium text-gray-600 hover:text-gray-800 flex items-center gap-1 transition-colors"
+                className="mt-2 text-xs text-gray-500 hover:text-gray-700 font-medium flex items-center gap-1 transition-colors"
               >
-                {expandedSkills[index] ? 'Show less' : `+ ${demo.skills.length - 4} more`}
-                <ChevronDown className={`w-4 h-4 transition-transform ${expandedSkills[index] ? 'rotate-180' : ''}`} />
+                {isExpanded ? 'Show less' : `+${demo.skills.length - 3} more`}
+                <ChevronDown className={`w-3 h-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
               </button>
             )}
           </div>
 
+          {/* Action Buttons */}
           <div className="flex gap-3">
             <a
               href={demo.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r ${demo.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all`}
+              className={`flex-1 flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r ${demo.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all`}
             >
-              View Live
               <ExternalLink className="w-4 h-4" />
+              <span>View Live</span>
             </a>
             <a
               href={demo.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors border border-gray-200"
+              className="flex items-center justify-center px-5 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl transition-all"
             >
               <Github className="w-5 h-5 text-gray-700" />
             </a>
           </div>
         </div>
+
+        {/* Accent line at bottom */}
+        <div className={`h-1 bg-gradient-to-r ${demo.gradient}`}></div>
       </div>
     );
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen">
       <div className="h-[40px] md:h-[120px]"></div>
-      <div className="max-w-6xl mx-auto">
-
-        <div className="text-center mb-20 mt-12">
+      
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+         {/* Header */}
+        <div className="text-center mb-20 md:mb-30 mt-12">
           <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-8 h-8 text-emerald-600" />
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-emerald-700 bg-clip-text text-transparent">
-              Interactive Demos
+            <Sparkles className="w-8 h-8 text-emerald-600 mr-0 ml-0 md:mr-2 md:ml-2" />
+            <h1 className="text-4xl mb-2 md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-emerald-700 bg-clip-text text-transparent">
+              Project Demos
             </h1>
-            <Sparkles className="w-8 h-8 text-emerald-600" />
+            <Sparkles className="w-8 h-8 text-emerald-600 mr-0 ml-0 md:mr-2 md:ml-2" />
           </div>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Watch my projects in action. Click on any project title to learn more about its development.
+          <p className="text-xl bg-gradient-to-r from-gray-800 to-emerald-700 bg-clip-text text-transparent max-w-2xl mx-auto leading-relaxed ">
+            Watch videos of my projects here! Click on any title to dive deeper into the application, or visit my Github to look at the source code
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        {/* Demo Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
           {demos.map((demo, idx) => (
             <DemoCard key={idx} demo={demo} index={idx} />
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-            Built With Modern Technologies
+        {/* Tech Stack Showcase */}
+        <div className="bg-white rounded-3xl shadow-xl p-10 mb-12 border border-gray-100">
+          <h2 className="text-2xl font-bold text-gray-700 mb-8 text-center">
+            Built With Modern Tech
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
-              <div className="text-3xl mb-2">⚛️</div>
-              <div className="font-semibold text-gray-700">React</div>
-            </div>
-            <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
-              <div className="text-3xl mb-2">🔥</div>
-              <div className="font-semibold text-gray-700">Firebase</div>
-            </div>
-            <div className="text-center p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
-              <div className="text-3xl mb-2">🤖</div>
-              <div className="font-semibold text-gray-700">AI APIs</div>
-            </div>
-            <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
-              <div className="text-3xl mb-2">📱</div>
-              <div className="font-semibold text-gray-700">React Native</div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { emoji: "⚛️", name: "React", gradient: "from-purple-400 to-purple-500" },
+              { emoji: "🔥", name: "Firebase", gradient: "from-orange-400 to-red-500" },
+              { emoji: "🤖", name: "AI APIs", gradient: "from-red-400 to-pink-500" },
+              { emoji: "📱", name: "React Native", gradient: "from-green-400 to-emerald-500" }
+            ].map((tech, idx) => (
+              <div
+                key={idx}
+                className={`relative group text-center p-6 rounded-2xl bg-gradient-to-br ${tech.gradient} overflow-hidden transition-transform hover:scale-105`}
+              >
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <div className="relative z-10">
+                  <div className="text-5xl mb-3">{tech.emoji}</div>
+                  <div className="font-bold text-white text-lg">{tech.name}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-emerald-300 to-emerald-400 rounded-2xl shadow-xl p-8 md:p-12 text-center text-white">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Want to explore the code?
-          </h2>
-          <p className="text-emerald-50 mb-6 text-lg max-w-2xl mx-auto">
-            All projects are open source and available on GitHub.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://github.com/MikeWeaver-dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-emerald-600 font-semibold rounded-xl hover:bg-emerald-50 transition-all shadow-lg"
-            >
-              <Github className="w-5 h-5" />
-              View GitHub Profile
-            </a>
-            <a
-              href="mailto:mikeweaverg@gmail.com"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-all shadow-lg"
-            >
-              Get In Touch
-              <ChevronRight className="w-5 h-5" />
-            </a>
+        {/* CTA */}
+        <div className="relative overflow-hidden bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 rounded-3xl shadow-2xl p-12 text-center text-white">
+          {/* Animated background elements */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="relative z-10">
+            <h2 className="text-xl md:text-3xl font-bold mb-4">
+              Want to See More?
+            </h2>
+            <p className="text-emerald-50 text-md mb-8 max-w-2xl mx-auto">
+              All projects are open source. Explore the code, see how they work, or get in touch!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://github.com/MikeWeaver-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-emerald-600 font-bold rounded-xl hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
+              >
+                <Github className="w-5 h-5" />
+                View on GitHub
+              </a>
+              <a
+                href="mailto:mikeweaverg@gmail.com"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-700 text-white font-bold rounded-xl hover:bg-emerald-800 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
+              >
+                Get In Touch
+                <ChevronRight className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   );
@@ -876,11 +873,11 @@ export function CensusView() {
       challenges={[
         {
           title: "Handling Large Datasets",
-          solution: "Implemented efficient data caching and lazy loading to handle millions of Census data points without performance degradation."
+          solution: "Implemented efficient data caching and loading to handle millions of Census data points without performance issues."
         },
         {
           title: "Complex Geospatial Rendering",
-          solution: "Optimized map rendering with strategic aggregation and implemented zoom-based detail levels for smooth user experience."
+          solution: "Optimized map rendering with Leaflet and TidyCensus and implemented cool zoom features to optimize user UI/UX"
         }
       ]}
       videoFile="CensusView.mp4"
@@ -901,11 +898,11 @@ export function Voyage() {
     <ProjectPage
       title="Voyage"
       tagline="Social Media for Travelers"
-      description="A full-featured social media platform designed specifically for travelers to share experiences, connect with fellow explorers, and discover new destinations."
+      description="A full-featured social media platform designed with scalability and sophisticated server interactions."
       fullDescription={[
-        "Voyage brings the travel community together in a dedicated social platform. Users can create profiles, share travel stories with photos, follow other travelers, and engage with content through likes and comments.",
+        "Voyage is a social platform for travelers. Users can create profiles, share travel stories with photos, follow others, and like posts",
         "The platform is built on Firebase, providing real-time updates, professional authentication, and scalable cloud infrastructure. Every interaction feels instant and smooth, from uploading photos to seeing new posts from friends.",
-        "With features like nested comments (sub-posts), cloud storage for images, and real-time database synchronization, Voyage offers a complete social media experience tailored for the travel community."
+        "With features like sub-posts, cloud storage for images, and real-time database synchronization, Voyage offers a complete social media experience."
       ]}
       features={[
         "User authentication and profile management",
@@ -923,18 +920,18 @@ export function Voyage() {
           solution: "Leveraged Firebase Realtime Database to ensure all users see updates instantly without manual refreshing."
         },
         {
-          title: "Scalable Image Storage",
-          solution: "Implemented Firebase Cloud Storage with optimized compression and CDN delivery for fast image loading."
+          title: "Scalability",
+          solution: "Implemented Firebase dynamic servers which allocate resources and handle CRUD operations appropriately to allow for indefinite scalability."
         }
       ]}
       videoFile="Voyage.mp4"
       thumbnail="/src/assets/thumbnails/Voyage Thumbnail.png"
       liveUrl="https://Mikeweaver.dev/Voyage"
       githubUrl="https://github.com/MikeWeaver-dev/Voyage"
-      gradient="from-purple-300 to-purple-400"
-      color="text-purple-600"
-      softColor="bg-purple-50"
-      border="border-purple-400"
+      gradient="from-red-300 to-red-400"
+      color="text-red-600"
+      softColor="bg-red-50"
+      border="border-red-400"
       icon={Plane}
     />
   );
@@ -947,29 +944,29 @@ export function AIChef() {
       tagline="Your Personal AI Recipe Generator"
       description="An intelligent recipe generator powered by GPT-4 that creates personalized meal suggestions based on ingredients you already have in your pantry."
       fullDescription={[
-        "AI Chef revolutionizes meal planning by using artificial intelligence to suggest recipes based on what you have on hand. Simply input your available ingredients, and GPT-4 generates creative, customized recipes just for you.",
-        "The app features a beautiful, intuitive interface optimized for both web and mobile devices. It's available on both the Apple App Store and Google Play Store, bringing AI-powered cooking assistance to millions of users.",
+        "AI Chef fascilitates meal planning by using artificial intelligence to suggest recipes based on what you have on hand. Simply input your available ingredients, and GPT-4 generates creative, customized recipes just for you.",
+        "The app features a professional interface optimized for both web and mobile devices. It's available on the Apple App Store and Google Play Store",
         "Built with React Native and Expo, AI Chef demonstrates seamless AI integration, persistent data storage, and professional mobile development practices across platforms."
       ]}
       features={[
         "GPT-4 powered recipe generation",
         "Pantry ingredient tracking",
         "Personalized meal suggestions",
-        "Save favorite recipes",
         "Cross-platform (iOS, Android, Web)",
-        "Firebase authentication",
+        "Firebase authentication & login (web)",
         "Beautiful, intuitive UI",
-        "Offline recipe access"
+        "Offline recipe access (mobile)",
+        "CRUD operations and data hosted on third-party server (web)"
       ]}
       techStack={["React Native", "Expo", "OpenAI API", "AI Integration", "Firebase", "NativeWind", "Mobile Development", "UI/UX"]}
       challenges={[
         {
-          title: "AI Response Consistency",
-          solution: "Crafted detailed prompts and implemented response validation to ensure GPT-4 generates properly formatted, practical recipes."
+          title: "Cross-Platform Performance",
+          solution: "Built using industry-standard Expo, React and React Native to work seemlessly across platforms."
         },
         {
-          title: "Cross-Platform Performance",
-          solution: "Optimized rendering and API calls to maintain smooth performance across iOS, Android, and web platforms."
+          title: "AI Response Consistency",
+          solution: "Crafted detailed prompts and implemented response validation to ensure GPT-4 generates properly formatted, practical recipes."
         }
       ]}
       videoFile="AIChef.mp4"
