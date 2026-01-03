@@ -256,8 +256,8 @@ export function ProjectCard({
   hover,
   link,
   mobile = false,
-  appleNavLink,
-  playNavLink,
+  appleLink,
+  playLink,
   icon: Icon 
 }) {
   
@@ -329,31 +329,31 @@ export function ProjectCard({
           </div>
 
           {/* Mobile App Store Badges – only if mobile=true */}
-          {mobile && (appleNavLink || playNavLink) && (
+          {mobile && (appleLink || playLink) && (
             <div className="flex justify-center gap-6 pt-6 mt-6 border-t border-gray-100">
-              {appleNavLink && (
+              {appleLink && (
                 <a
-                  href={appleNavLink}
+                  href={appleLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transform hover:scale-105 transition-transform duration-200 flex justify-center"
                 >
                   <img 
-                    src="/src/assets/App Store.svg" 
+                    src="/assets/App Store.svg" 
                     alt="Download on the App Store" 
                     className="h-12 md:h-14 w-auto object-contain"
                   />
                 </a>
               )}
-              {playNavLink && (
+              {playLink && (
                 <a
-                  href={playNavLink}
+                  href={playLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transform hover:scale-105 transition-transform duration-200 flex justify-center"
                 >
                   <img 
-                    src="/src/assets/Google Play Store.png" 
+                    src="/assets/Google Play Store.png" 
                     alt="Get it on Google Play" 
                     className="h-12 md:h-14 w-auto object-contain"
                   />
@@ -384,8 +384,8 @@ export function ProjectPage({
   thumbnail,
   liveUrl,
   githubUrl,
-  appleNavLink,
-  playNavLink,
+  appleLink,
+  playLink,
   gradient,
   color,
   softColor,
@@ -448,7 +448,7 @@ export function ProjectPage({
                 className="w-full h-full object-cover"
                 controls
                 autoPlay
-                src={`/src/assets/${videoFile}`}
+                src={`/assets/${videoFile}`}
               >
                 Your browser does not support the video tag.
               </video>
@@ -479,31 +479,31 @@ export function ProjectPage({
         </div>
 
         {/* App Store Badges */}
-        {(appleNavLink || playNavLink) && (
+        {(appleLink || playLink) && (
           <div className="flex flex-wrap gap-6 justify-center mb-12 pb-12 border-b border-gray-200">
-            {appleNavLink && (
+            {appleLink && (
               <a
-                href={appleNavLink}
+                href={appleLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transform hover:scale-105 transition-transform"
               >
                 <img 
-                  src="/src/assets/App Store.svg" 
+                  src="/assets/App Store.svg" 
                   alt="Download on the App Store" 
                   className="h-14 md:h-16 w-auto"
                 />
               </a>
             )}
-            {playNavLink && (
+            {playLink && (
               <a
-                href={playNavLink}
+                href={playLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transform hover:scale-105 transition-transform"
               >
                 <img 
-                  src="/src/assets/Google Play Store.png" 
+                  src="/assets/Google Play Store.png" 
                   alt="Get it on Google Play" 
                   className="h-14 md:h-16 w-auto"
                 />

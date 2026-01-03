@@ -192,7 +192,7 @@ export function About() {
             <p className="text-gray-600">Aspiring Software Developer</p>
           </div>
           <a 
-            href="/src/assets/Michael Weaver Resume.pdf" 
+            href="/assets/Michael Weaver Resume.pdf" 
             download
             className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
@@ -528,7 +528,7 @@ export function About() {
               Send me an email
             </a>
             <a 
-              href="/src/assets/Mike Weaver Resume.pdf" 
+              href="/assets/Mike Weaver Resume.pdf" 
               download
               className="px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-800 transition-all shadow-lg flex items-center justify-center gap-2"
             >
@@ -557,7 +557,7 @@ export function Demos() {
       liveUrl: "https://Mikeweaver.dev/CensusView",
       githubUrl: "https://github.com/MikeWeaver-dev/CensusView",
       videoFile: "CensusView.mp4",
-      thumbnail: "/src/assets/thumbnails/CensusView Thumbnail.png",
+      thumbnail: "/assets/thumbnails/CensusView Thumbnail.png",
       gradient: "from-green-400 to-emerald-500",
       accentColor: "bg-green-500",
       textColor: "text-green-600",
@@ -574,7 +574,7 @@ export function Demos() {
       liveUrl: "https://Mikeweaver.dev/Voyage",
       githubUrl: "https://github.com/MikeWeaver-dev/Voyage",
       videoFile: "Voyage.mp4",
-      thumbnail: "/src/assets/thumbnails/Voyage Thumbnail.png",
+      thumbnail: "/assets/thumbnails/Voyage Thumbnail.png",
       gradient: "from-red-400 to-pink-500",
       accentColor: "bg-red-500",
       textColor: "text-red-600",
@@ -591,7 +591,7 @@ export function Demos() {
       liveUrl: "https://Mikeweaver.dev/AIChef",
       githubUrl: "https://github.com/MikeWeaver-dev/AIChef",
       videoFile: "AIChef.mp4",
-      thumbnail: "/src/assets/thumbnails/AI Chef Thumbnail.png",
+      thumbnail: "/assets/thumbnails/AI Chef Thumbnail.png",
       gradient: "from-orange-400 to-red-500",
       accentColor: "bg-orange-500",
       textColor: "text-orange-600",
@@ -608,7 +608,7 @@ export function Demos() {
       liveUrl: "https://Mikeweaver.dev/SpotifyLab",
       githubUrl: "https://github.com/MikeWeaver-dev",
       videoFile: "SpotifyLab.mp4",
-      thumbnail: "/src/assets/thumbnails/SpotifyLab Thumbnail.png",
+      thumbnail: "/assets/thumbnails/SpotifyLab Thumbnail.png",
       gradient: "from-purple-400 to-purple-600",
       accentColor: "bg-purple-500",
       textColor: "text-purple-600",
@@ -678,7 +678,7 @@ export function Demos() {
               className="w-full h-full object-cover"
               controls
               autoPlay
-              src={`/src/assets/${demo.videoFile}`}
+              src={`/assets/${demo.videoFile}`}
             >
               Your browser does not support the video tag.
             </video>
@@ -889,7 +889,7 @@ export function CensusView() {
         }
       ]}
       videoFile="CensusView.mp4"
-      thumbnail="/src/assets/thumbnails/CensusView Thumbnail.png"
+      thumbnail="/assets/thumbnails/CensusView Thumbnail.png"
       liveUrl="https://Mikeweaver.dev/CensusView"
       githubUrl="https://github.com/MikeWeaver-dev/CensusView"
       gradient="from-green-300 to-green-400"
@@ -933,7 +933,7 @@ export function Voyage() {
         }
       ]}
       videoFile="Voyage.mp4"
-      thumbnail="/src/assets/thumbnails/Voyage Thumbnail.png"
+      thumbnail="/assets/thumbnails/Voyage Thumbnail.png"
       liveUrl="https://Mikeweaver.dev/Voyage"
       githubUrl="https://github.com/MikeWeaver-dev/Voyage"
       gradient="from-red-300 to-red-400"
@@ -978,7 +978,7 @@ export function AIChef() {
         }
       ]}
       videoFile="AIChef.mp4"
-      thumbnail="/src/assets/thumbnails/AI Chef Thumbnail.png"
+      thumbnail="/assets/thumbnails/AI Chef Thumbnail.png"
       liveUrl="https://Mikeweaver.dev/AIChef"
       githubUrl="https://github.com/MikeWeaver-dev/AIChef"
       appleLink="https://Mikeweaver.dev/AIChef"
