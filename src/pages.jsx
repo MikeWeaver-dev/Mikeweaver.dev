@@ -528,7 +528,7 @@ export function About() {
               Send me an email
             </a>
             <a 
-              href="/assets/Mike Weaver Resume.pdf" 
+              href="/assets/Michael Weaver Resume.pdf" 
               download
               className="px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-800 transition-all shadow-lg flex items-center justify-center gap-2"
             >

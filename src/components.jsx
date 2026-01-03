@@ -25,10 +25,10 @@ export function Header() {
           </div>
         </div>
         <div className="hidden md:flex items-center gap-3">
-          <a href="https://github.com" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
+          <a href="https://github.com/MikeWeaver-dev" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
             <Github className="w-5 h-5 text-gray-600" />
           </a>
-          <a href="https://Linkedin.com" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
+          <a href="https://www.linkedin.com/in/mikeweaverg/" target="_blank" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
             <Linkedin className="w-5 h-5 text-gray-600" />
           </a>
           <a href="mailto:mikeweaverg@gmail.com" className="p-2 hover:bg-emerald-100 rounded-lg transition-all">
