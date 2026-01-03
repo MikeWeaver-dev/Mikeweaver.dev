@@ -19,6 +19,13 @@ dist-ssr
 
 /src/assets/*.mp4
 
+/public/assets/CensusView.mp4
+/public/assets/SpotifyLab.mp4
+/public/assets/Voyage.mp4
+/public/assets/AIChef.mp4
+
+/public/assets/*.mp4
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
