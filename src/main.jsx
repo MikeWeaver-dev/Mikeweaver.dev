@@ -41,9 +41,11 @@ function Main() {
           <Route path="/projects/aichef" element={<AIChef />} />
           <Route path="/projects/spotifylab" element={<SpotifyLab />} />
 
+
+          {/* these are only helpful before deployment to let the user know it is under construction. I'll comment out as I go */}
           <Route path="/censusview" element={<CensusViewRouting />} />
           <Route path="/voyage" element={<VoyageRouting />} />
-          <Route path="/aichef" element={<AIChefRouting />} />
+          {/* <Route path="/aichef" element={<AIChefRouting />} /> */}
 
           <Route path="/spotifylab" element={<Navigate to="/projects/spotifylab" replace />} />
           <Route path="*" element={<Navigate to="/featured-projects" replace />} />
