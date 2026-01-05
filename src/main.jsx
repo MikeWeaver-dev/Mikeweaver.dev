@@ -45,10 +45,10 @@ function Main() {
           {/* these are only helpful before deployment to let the user know it is under construction. I'll comment out as I go */}
           <Route path="/censusview" element={<CensusViewRouting />} />
           <Route path="/voyage" element={<VoyageRouting />} />
-          {/* <Route path="/aichef" element={<AIChefRouting />} /> */}
+          <Route path="/aichef" element={<Navigate to="https://aichef.mikeweaver.dev" replace external />}/>
 
           <Route path="/spotifylab" element={<Navigate to="/projects/spotifylab" replace />} />
-          <Route path="*" element={<Navigate to="/featured-projects" replace />} />
+          <Route path="*" element={<Navigate to="/projects" replace />} />
 
         </Routes>
         <Footer/>
