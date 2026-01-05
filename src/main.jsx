@@ -18,6 +18,13 @@ export default function ScrollToTop() {
   return null;
 }
 
+function RedirectToAIChef() {
+  useEffect(() => {
+    window.location.href = "https://aichef.mikeweaver.dev";
+  }, []);
+
+  return null; // nothing rendered
+}
 
 function Main() {
   return(
@@ -45,7 +52,7 @@ function Main() {
           {/* these are only helpful before deployment to let the user know it is under construction. I'll comment out as I go */}
           <Route path="/censusview" element={<CensusViewRouting />} />
           <Route path="/voyage" element={<VoyageRouting />} />
-          <Route path="/aichef" element={<Navigate to="https://aichef.mikeweaver.dev" replace external />}/>
+          <Route path="/aichef" element={<RedirectToAIChef />} />
 
           <Route path="/spotifylab" element={<Navigate to="/projects/spotifylab" replace />} />
           <Route path="*" element={<Navigate to="/projects" replace />} />
