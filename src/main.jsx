@@ -26,6 +26,14 @@ function RedirectToAIChef() {
   return null; // nothing rendered
 }
 
+function RedirectToVoyage() {
+  useEffect(() => {
+    window.location.href = "https://voyage.mikeweaver.dev";
+  }, []);
+
+  return null; // nothing rendered
+}
+
 function Main() {
   return(
     <BrowserRouter>
@@ -51,7 +59,7 @@ function Main() {
 
           {/* these are only helpful before deployment to let the user know it is under construction. I'll comment out as I go */}
           <Route path="/censusview" element={<CensusViewRouting />} />
-          <Route path="/voyage" element={<VoyageRouting />} />
+          <Route path="/voyage" element={<RedirectToVoyage />} />
           <Route path="/aichef" element={<RedirectToAIChef />} />
 
           <Route path="/spotifylab" element={<Navigate to="/projects/spotifylab" replace />} />
