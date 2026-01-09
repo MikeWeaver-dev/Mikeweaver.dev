@@ -28,7 +28,7 @@ export function Projects() {
       title: "Voyage",
       description: "Full-service social media platform designed for travelers to share experiences. Features real-time updates, image uploads, third-party server and database hosting, authentication, profiles, likes, posts, sub-posts and more.",
       skills: ["React", "Firebase", "Realtime Database", "Authentication", "Cloud Storage", "Responsive Design"],
-      liveUrl: "https://Mikeweaver.dev/Voyage",
+      liveUrl: "https://voyage.Mikeweaver.dev/",
       page: "Voyage",
       link: "/projects/voyage",
       gradient: "from-red-300 to-red-400",
@@ -37,15 +37,15 @@ export function Projects() {
       border: "border-red-400",
       hover: "hover:text-red-400",
       mobile: false,
-      appleLink: "https://Mikeweaver.dev/Voyage",
-      playLink: "https://Mikeweaver.dev/Voyage",
+      appleLink: "https://voyage.Mikeweaver.dev/",
+      playLink: "https://voyage.Mikeweaver.dev/",
       icon: Plane
     },
     {
       title: "AI Chef",
       description: "AI powered recipe generator that uses GPT-4 to create personalized meal suggestions based on ingredients in the users pantry. Features a stunning UI and optimization for mobile and web, with availability on the Apple and Google Play store.",
       skills: ["React Native", "Expo", "OpenAI API", "Ai Integration", "Firebase", "NativeWind", "Mobile Development"],
-      liveUrl: "https://Mikeweaver.dev/AIChef",
+      liveUrl: "https://aichef.Mikeweaver.dev/",
       page: "AIChef",
       link: "/projects/aichef",
       gradient: "from-orange-300 to-orange-400",
@@ -54,8 +54,8 @@ export function Projects() {
       border: "border-orange-400",
       hover: "hover:text-orange-400",
       mobile: true,
-      appleLink: "https://Mikeweaver.dev/AIChef",
-      playLink: "https://Mikeweaver.dev/AIChef",
+      appleLink: "https://aichef.Mikeweaver.dev/",
+      playLink: "https://aichef.Mikeweaver.dev/",
       icon: ChefHat
     },
     {
@@ -571,7 +571,7 @@ export function Demos() {
       description: "Full-service social media platform designed for travelers to share experiences. Features real-time updates, image uploads, authentication, and more.",
       skills: ["React", "Firebase", "Realtime Database", "Authentication", "Cloud Storage", "Responsive Design"],
       videoTags: ["CRUD Operations", "Firebase"],
-      liveUrl: "https://Mikeweaver.dev/Voyage",
+      liveUrl: "https://voyage.Mikeweaver.dev/",
       githubUrl: "https://github.com/MikeWeaver-dev/Voyage",
       videoFile: "Voyage.mp4",
       thumbnail: "/assets/thumbnails/Voyage Thumbnail.png",
@@ -588,7 +588,7 @@ export function Demos() {
       description: "AI powered recipe generator using GPT-4 to create personalized meal suggestions. Available on iOS, Android, and web.",
       skills: ["React Native", "Expo", "OpenAI API", "AI Integration", "Firebase", "Mobile Development"],
       videoTags: ["AI Integration", "Mobile"],
-      liveUrl: "https://Mikeweaver.dev/AIChef",
+      liveUrl: "https://aichef.Mikeweaver.dev/",
       githubUrl: "https://github.com/MikeWeaver-dev/AIChef",
       videoFile: "AIChef.mp4",
       thumbnail: "/assets/thumbnails/AI Chef Thumbnail.png",
@@ -934,7 +934,7 @@ export function Voyage() {
       ]}
       videoFile="Voyage.mp4"
       thumbnail="/assets/thumbnails/Voyage Thumbnail.png"
-      liveUrl="https://Mikeweaver.dev/Voyage"
+      liveUrl="https://voyage.Mikeweaver.dev/"
       githubUrl="https://github.com/MikeWeaver-dev/Voyage"
       gradient="from-red-300 to-red-400"
       color="text-red-600"
@@ -979,10 +979,10 @@ export function AIChef() {
       ]}
       videoFile="AIChef.mp4"
       thumbnail="/assets/thumbnails/AI Chef Thumbnail.png"
-      liveUrl="https://Mikeweaver.dev/AIChef"
+      liveUrl="https://aichef.Mikeweaver.dev/"
       githubUrl="https://github.com/MikeWeaver-dev/AIChef"
-      appleLink="https://Mikeweaver.dev/AIChef"
-      playLink="https://Mikeweaver.dev/AIChef"
+      appleLink="https://aichef.Mikeweaver.dev/"
+      playLink="https://aichef.Mikeweaver.dev/"
       gradient="from-orange-300 to-orange-400"
       color="text-orange-600"
       softColor="bg-orange-50"
