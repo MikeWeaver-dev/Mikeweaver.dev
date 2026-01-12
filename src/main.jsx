@@ -34,6 +34,14 @@ function RedirectToVoyage() {
   return null; // nothing rendered
 }
 
+function RedirectToCensusView() {
+  useEffect(() => {
+    window.location.href = "https://019bb017-f381-3cf6-cf02-077820195931.share.connect.posit.cloud";
+  }, []);
+
+  return null; // nothing rendered
+}
+
 function Main() {
   return(
     <BrowserRouter>
@@ -58,7 +66,7 @@ function Main() {
 
 
           {/* redirect redirect */}
-          <Route path="/censusview" element={<CensusViewRouting />} />
+          <Route path="/censusview" element={<RedirectToCensusView />} />
           <Route path="/voyage" element={<RedirectToVoyage />} />
           <Route path="/aichef" element={<RedirectToAIChef />} />
 
