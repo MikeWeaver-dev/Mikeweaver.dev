@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
 import {Header, Navbar, Sidebar, Footer} from "./components.jsx";
-import {Projects, Demos, About, CensusView, Voyage, AIChef, SpotifyLab, VoyageRouting, AIChefRouting, CensusViewRouting} from "./pages.jsx"
+import {Projects, Demos, About, CensusView, Voyage, AIChef, SpotifyLab, VoyageRouting, AIChefRouting, CensusViewRouting, PrivacyAIChefIOS, SupportAIChefIOS, PrivacyAIChefAndroid, SupportAIChefAndroid} from "./pages.jsx"
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -64,6 +64,10 @@ function Main() {
           <Route path="/projects/aichef" element={<AIChef />} />
           <Route path="/projects/spotifylab" element={<SpotifyLab />} />
 
+          <Route path="/privacy/aichef/ios" element={<PrivacyAIChefIOS />} />
+          <Route path="/privacy/aichef/android" element={<PrivacyAIChefAndroid />} />
+          <Route path="/support/aichef/ios" element={<SupportAIChefIOS />} />
+          <Route path="/support/aichef/android" element={<SupportAIChefAndroid />} />
 
           {/* redirect redirect */}
           <Route path="/censusview" element={<RedirectToCensusView />} />

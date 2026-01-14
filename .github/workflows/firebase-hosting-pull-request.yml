@@ -19,3 +19,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIKEWEAVER_DEV_9515F }}
           projectId: mikeweaver-dev-9515f
+

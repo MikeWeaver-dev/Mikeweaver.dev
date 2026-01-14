@@ -1051,3 +1051,343 @@ export function AIChefRouting(){
     </>
   )
 }
+
+export function PrivacyAIChefIOS(){
+  return(
+    <>
+      <div className="h-[100px] md:h-[150px]"></div>
+
+      <div className="shadow-md shadow-gray-500 rounded-xl px-4 mt-4 border border-gray-100">
+        <p className="font-bold mb-8 mt-4 text-xl text-green-500">
+          AI Chef iOS App – Privacy Policy
+        </p>
+
+        <h1 className="text-md mb-6">
+          This Privacy Policy applies specifically to the AI Chef iOS application.
+          Your privacy is important, and this app is designed to minimize data
+          collection while providing helpful cooking assistance.
+        </h1>
+
+        <div className="border border-gray-100 shadow-xl rounded-xl ml-0 mr-0 mt-8 mb-4">
+          <div className="border-l-4 border-green-500 ml-4">
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Information We Collect
+              <ol className="font-normal mt-4">
+                <li>- Ingredients, meal preferences, and prompts entered by the user</li>
+                <li>- Basic device and app version information for troubleshooting</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              How Your Data Is Used
+              <ol className="font-normal mt-4">
+                <li>- To generate recipe suggestions and cooking guidance</li>
+                <li>- To respond to user requests within the app</li>
+                <li>- To provide support when contacted by the user</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Data Storage
+              <ol className="font-normal mt-4">
+                <li>- All user data in the iOS google play app are stored locally on your device</li>
+                <li>- AI Chef does not maintain user accounts</li>
+                <li>- No personal data is stored on external servers for the iOS app</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Third-Party Processing
+              <ol className="font-normal mt-4">
+                <li>- User prompts are securely sent to an AI service (such as GPT) to generate responses</li>
+                <li>- This data is used only to fulfill the requested functionality</li>
+                <li>- AI Chef does not sell or use this data for advertising or tracking</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Children’s Privacy
+              <ol className="font-normal mt-4">
+                <li>- AI Chef is suitable for children ages 4 and up</li>
+                <li>- The app does not knowingly collect personal information from children</li>
+                <li>- No accounts exist on mobile, no social features, or messaging are included</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Data Sharing
+              <ol className="font-normal mt-4">
+                <li>- We do not sell personal data</li>
+                <li>- Data is not shared for advertising or tracking purposes</li>
+                <li>- Data is only shared when necessary to provide core app functionality</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Contact
+              <ol className="font-normal mt-4">
+                <li>
+                  - For questions about privacy or support, contact:
+                  <span className="text-green-500 font-bold ml-2">
+                    Mikeweaverg@gmail.com
+                  </span>
+                </li>
+              </ol>
+            </h1>
+
+            <h1 className="text-sm text-left mt-4 mb-12 ml-12 mr-12 text-gray-500">
+              This Privacy Policy may be updated as the app evolves. Any changes will be reflected on this page.
+            </h1>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="h-[50px] md:h-[50px] mb-8"></div>
+    </>
+  )
+}
+
+
+export function SupportAIChefIOS(){
+    return(
+      <>
+        <div className="h-[100px] md:h-[150px]"></div>
+          <div className="shadow-md shadow-gray-500 rounded-xl px-4 mt-4 border border-gray-100">
+            <p className ="font-bold mb-8 mt-4 text-xl text-green-500">
+              AI Chef iOS App Support
+            </p>
+            <h1 className ="text-md"> 
+              For specific questions about AI Chef or to report an issue, please email Mike Weaver at: <span className="text-green-500 font-bold ml-2"> Mikeweaverg@gmail.com</span>
+            </h1>
+            <div className="border border-gray-100 shadow-xl rounded-xl ml-0 mr-0 mt-8 mb-4">
+              <div className = "border-l-4 border-green-500 ml-4">
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  When contacting for support, please include the following
+                  <ol className ="font-normal mt-4">
+                    <li>- Your Device Model</li>
+                    <li>- iOS Version</li>
+                    <li>- App Version</li>
+                    <li>- Description of the Issue</li>
+                  </ol>
+                </h1>
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  Basic Troubleshooting
+                  <ol className ="font-normal mt-4">
+                    <li>- Make sure App is up to date</li>
+                    <li>- Make sure iOS is up to date</li>
+                    <li>- Restart the App</li>
+                    <li>- Re-install the App if the issue persists</li>
+                  </ol>
+                </h1>
+              </div>
+            </div>
+        </div>
+
+       <div className="h-[50px] md:h-[50px] mb-8"></div>
+          <div className="shadow-md shadow-gray-500 rounded-xl px-4 mb-8 border border-gray-100">
+            <p className ="font-bold mb-8 mt-4 text-xl text-green-500">
+              How to use AI Chef
+            </p>
+            <h1 className ="text-md"> 
+              You can always click on the<span className="text-green-500 font-bold ml-0"> About </span>Tab, which includes a section titled<span className="text-green-500 font-bold ml-0"> How To</span>
+            </h1>
+            <div className="border border-gray-100 shadow-xl rounded-xl ml-0 mr-0 mt-8 mb-4">
+              <div className = "border-l-4 border-green-500 ml-4">
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  First, scroll to the "pantry" tab. from here, you should
+                  <ol className ="font-normal mt-4">
+                    <li>- Add ingredients that are missing</li>
+                    <li>- Edit your existing ingredients</li>
+                    <li>- Delete items where appropriate</li>
+                    <li>- Try to get the App to best match food you have on hand</li>
+                  </ol>
+                </h1>
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  Now head to "Chef". From here you can
+                  <ol className ="font-normal mt-4">
+                    <li>- Input the type of meal you want and your preferences in the chatbot</li>
+                    <li>- Click the "send" button</li>
+                    <li>- Wait for a response to load</li>
+                  </ol>
+                <h1 className ="text-md text-left font-semibold text-left mt-4 text-green-500"> 
+                  That's it! Happy cooking!
+                </h1>
+                </h1>
+              </div>
+            </div>
+        </div>
+    </>
+    )
+}
+
+export function PrivacyAIChefAndroid(){
+  return(
+    <>
+      <div className="h-[100px] md:h-[150px]"></div>
+
+      <div className="shadow-md shadow-gray-500 rounded-xl px-4 mt-4 border border-gray-100">
+        <p className="font-bold mb-8 mt-4 text-xl text-green-500">
+          AI Chef Android App – Privacy Policy
+        </p>
+
+        <h1 className="text-md mb-6">
+          This Privacy Policy applies specifically to the AI Chef Android application.
+          Your privacy is important, and this app is designed to minimize data
+          collection while providing helpful cooking assistance.
+        </h1>
+
+        <div className="border border-gray-100 shadow-xl rounded-xl ml-0 mr-0 mt-8 mb-4">
+          <div className="border-l-4 border-green-500 ml-4">
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Information We Collect
+              <ol className="font-normal mt-4">
+                <li>- Ingredients, meal preferences, and prompts entered by the user</li>
+                <li>- Basic device and app version information for troubleshooting</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              How Your Data Is Used
+              <ol className="font-normal mt-4">
+                <li>- To generate recipe suggestions and cooking guidance</li>
+                <li>- To respond to user requests within the app</li>
+                <li>- To provide support when contacted by the user</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Data Storage
+              <ol className="font-normal mt-4">
+                <li>- All user data in the Android google play app are stored locally on your device</li>
+                <li>- AI Chef does not maintain user accounts</li>
+                <li>- No personal data is stored on external servers for the Android app</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Third-Party Processing
+              <ol className="font-normal mt-4">
+                <li>- User prompts are securely sent to an AI service (such as GPT) to generate responses</li>
+                <li>- This data is used only to fulfill the requested functionality</li>
+                <li>- AI Chef does not sell or use this data for advertising or tracking</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Children’s Privacy
+              <ol className="font-normal mt-4">
+                <li>- AI Chef is suitable for children ages 4 and up</li>
+                <li>- The app does not knowingly collect personal information from children</li>
+                <li>- No accounts exist on mobile, no social features, or messaging are included</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Data Sharing
+              <ol className="font-normal mt-4">
+                <li>- We do not sell personal data</li>
+                <li>- Data is not shared for advertising or tracking purposes</li>
+                <li>- Data is only shared when necessary to provide core app functionality</li>
+              </ol>
+            </h1>
+
+            <h1 className="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12">
+              Contact
+              <ol className="font-normal mt-4">
+                <li>
+                  - For questions about privacy or support, contact:
+                  <span className="text-green-500 font-bold ml-2">
+                    Mikeweaverg@gmail.com
+                  </span>
+                </li>
+              </ol>
+            </h1>
+
+            <h1 className="text-sm text-left mt-4 mb-12 ml-12 mr-12 text-gray-500">
+              This Privacy Policy may be updated as the app evolves. Any changes will be reflected on this page.
+            </h1>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="h-[50px] md:h-[50px] mb-8"></div>
+    </>
+  )
+}
+
+
+export function SupportAIChefAndroid(){
+    return(
+      <>
+        <div className="h-[100px] md:h-[150px]"></div>
+          <div className="shadow-md shadow-gray-500 rounded-xl px-4 mt-4 border border-gray-100">
+            <p className ="font-bold mb-8 mt-4 text-xl text-green-500">
+              AI Chef Android App Support
+            </p>
+            <h1 className ="text-md"> 
+              For specific questions about AI Chef or to report an issue, please email Mike Weaver at: <span className="text-green-500 font-bold ml-2"> Mikeweaverg@gmail.com</span>
+            </h1>
+            <div className="border border-gray-100 shadow-xl rounded-xl ml-0 mr-0 mt-8 mb-4">
+              <div className = "border-l-4 border-green-500 ml-4">
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  When contacting for support, please include the following
+                  <ol className ="font-normal mt-4">
+                    <li>- Your Device Model</li>
+                    <li>- Android Version</li>
+                    <li>- App Version</li>
+                    <li>- Description of the Issue</li>
+                  </ol>
+                </h1>
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  Basic Troubleshooting
+                  <ol className ="font-normal mt-4">
+                    <li>- Make sure App is up to date</li>
+                    <li>- Make sure Android is up to date</li>
+                    <li>- Restart the App</li>
+                    <li>- Re-install the App if the issue persists</li>
+                  </ol>
+                </h1>
+              </div>
+            </div>
+        </div>
+
+       <div className="h-[50px] md:h-[50px] mb-8"></div>
+          <div className="shadow-md shadow-gray-500 rounded-xl px-4 mb-8 border border-gray-100">
+            <p className ="font-bold mb-8 mt-4 text-xl text-green-500">
+              How to use AI Chef
+            </p>
+            <h1 className ="text-md"> 
+              You can always click on the<span className="text-green-500 font-bold ml-0"> About </span>Tab, which includes a section titled<span className="text-green-500 font-bold ml-0"> How To</span>
+            </h1>
+            <div className="border border-gray-100 shadow-xl rounded-xl ml-0 mr-0 mt-8 mb-4">
+              <div className = "border-l-4 border-green-500 ml-4">
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  First, scroll to the "pantry" tab. from here, you should
+                  <ol className ="font-normal mt-4">
+                    <li>- Add ingredients that are missing</li>
+                    <li>- Edit your existing ingredients</li>
+                    <li>- Delete items where appropriate</li>
+                    <li>- Try to get the App to best match food you have on hand</li>
+                  </ol>
+                </h1>
+                <h1 className ="text-md font-semibold text-left mt-12 mb-12 ml-12 mr-12"> 
+                  Now head to "Chef". From here you can
+                  <ol className ="font-normal mt-4">
+                    <li>- Input the type of meal you want and your preferences in the chatbot</li>
+                    <li>- Click the "send" button</li>
+                    <li>- Wait for a response to load</li>
+                  </ol>
+                <h1 className ="text-md text-left font-semibold text-left mt-4 text-green-500"> 
+                  That's it! Happy cooking!
+                </h1>
+                </h1>
+              </div>
+            </div>
+        </div>
+    </>
+    )
+}

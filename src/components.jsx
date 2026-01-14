@@ -13,13 +13,13 @@ export function Header() {
             <Code2 className="w-6 h-6 md:w-8 md:h-8 text-white" />
           </div>
           <div>
-            <h1 className="text-lg md:text-2xl font-bold text-gray-800 tracking-tight">
+            <h1 className="text-lg text-left md:text-2xl font-bold text-gray-800 tracking-tight">
               Mike Weaver
             </h1>
             <div className="flex justify-between">
                 <Sparkles className=" w-3.5 h-3.5 mr-1 mt-0 md:mt-1 text-emerald-600"/>
                 <p className="text-xs md:text-sm text-gray-500">
-                  Full Stack Developer
+                  Frontend & Full Stack Developer
                 </p>
             </div>
           </div>
