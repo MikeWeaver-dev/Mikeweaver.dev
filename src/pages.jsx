@@ -54,7 +54,7 @@ export function Projects() {
       border: "border-orange-400",
       hover: "hover:text-orange-400",
       mobile: true,
-      appleLink: "https://aichef.Mikeweaver.dev/",
+      appleLink: "https://apps.apple.com/us/app/ai-chef-mobile/id6757723555",
       playLink: "https://aichef.Mikeweaver.dev/",
       icon: ChefHat
     },
@@ -981,7 +981,7 @@ export function AIChef() {
       thumbnail="/assets/thumbnails/AI Chef Thumbnail.png"
       liveUrl="https://aichef.Mikeweaver.dev/"
       githubUrl="https://github.com/MikeWeaver-dev/AIChef"
-      appleLink="https://aichef.Mikeweaver.dev/"
+      appleLink="https://apps.apple.com/us/app/ai-chef-mobile/id6757723555"
       playLink="https://aichef.Mikeweaver.dev/"
       gradient="from-orange-300 to-orange-400"
       color="text-orange-600"
@@ -997,7 +997,7 @@ export function SpotifyLab(){
     <>
       <div className="h-[200px] md:h-[300px]"></div>
       <p className ="font-semibold mb-8 text-xl">
-        🚧🚧🚧 SpotifyLab under construction and will be delivered January 31st 2026. 🚧🚧🚧
+        🚧🚧🚧 Spotify put their API and Spotify Developer accounts on hold on January 5th 2026. Once the connection is back up you will be able to access SpotifyLab. Sorry for the inconvenience! 🚧🚧🚧
       </p>
       <h1 className ="text-lg"> 
         Check back soon!

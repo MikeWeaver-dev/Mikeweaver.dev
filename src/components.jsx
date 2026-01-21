@@ -330,7 +330,7 @@ export function ProjectCard({
 
           {/* Mobile App Store Badges – only if mobile=true */}
           {mobile && (appleLink || playLink) && (
-            <div className="flex justify-center gap-6 pt-6 mt-6 border-t border-gray-100">
+            <div className="flex justify-center gap-2 md:gap-6 pt-6 mt-6 border-t border-gray-100">
               {appleLink && (
                 <a
                   href={appleLink}
@@ -341,7 +341,7 @@ export function ProjectCard({
                   <img 
                     src="/assets/App Store.svg" 
                     alt="Download on the App Store" 
-                    className="h-12 md:h-14 w-auto object-contain"
+                    className="h-12 md:h-12 w-auto object-contain"
                   />
                 </a>
               )}
@@ -355,7 +355,7 @@ export function ProjectCard({
                   <img 
                     src="/assets/Google Play Store.png" 
                     alt="Get it on Google Play" 
-                    className="h-12 md:h-14 w-auto object-contain"
+                    className="h-12 md:h-12 w-auto object-contain"
                   />
                 </a>
               )}
@@ -457,7 +457,7 @@ export function ProjectPage({
         </div>
 
         {/* Quick NavLinks */}
-        <div className="flex flex-wrap gap-4 mb-12 justify-center">
+        <div className="flex flex-wrap gap-4 mb-4 md:mb-8 justify-center">
           <a
             href={liveUrl}
             target="_blank"
@@ -480,7 +480,7 @@ export function ProjectPage({
 
         {/* App Store Badges */}
         {(appleLink || playLink) && (
-          <div className="flex flex-wrap gap-6 justify-center mb-12 pb-12 border-b border-gray-200">
+          <div className="flex flex-wrap gap-4 justify-center mb-12 pb-12 border-b border-gray-200">
             {appleLink && (
               <a
                 href={appleLink}
@@ -491,7 +491,7 @@ export function ProjectPage({
                 <img 
                   src="/assets/App Store.svg" 
                   alt="Download on the App Store" 
-                  className="h-14 md:h-16 w-auto"
+                  className="h-12 md:h-12 w-auto"
                 />
               </a>
             )}
@@ -505,7 +505,7 @@ export function ProjectPage({
                 <img 
                   src="/assets/Google Play Store.png" 
                   alt="Get it on Google Play" 
-                  className="h-14 md:h-16 w-auto"
+                  className="h-12 md:h-12 w-auto"
                 />
               </a>
             )}
