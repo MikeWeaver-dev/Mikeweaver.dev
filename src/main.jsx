@@ -82,6 +82,8 @@ function Main() {
       </div>
     </BrowserRouter>
   )
-}
+} 
+
+const test = 10;
 
 createRoot(document.getElementById("root")).render(<Main />);
