@@ -84,6 +84,6 @@ function Main() {
   )
 } 
 
-const test = 3;
+const test = 1;
 
 createRoot(document.getElementById("root")).render(<Main />);
