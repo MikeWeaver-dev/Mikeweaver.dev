@@ -85,12 +85,12 @@ export function Projects() {
         {/* Header */}
         <div className="text-center mb-20 md:mb-30 mt-12">
           <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-8 h-8 text-emerald-600 mr-0 ml-0 md:mr-2 md:ml-2" />
-            <h1 className="text-4xl mb-2 md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-emerald-700 bg-clip-text text-transparent">
+            <Sparkles className="w-8 h-10 pb-2 text-emerald-600 mr-0 ml-0 md:mr-2 md:ml-2" />
+            <h1 className="text-3xl mb-2 pb-2 md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-emerald-700 bg-clip-text text-transparent">
               Featured Projects
             </h1>
-            <Sparkles className="w-8 h-8 text-emerald-600 mr-0 ml-0 md:mr-2 md:ml-2" />
-          </div>
+            <Sparkles className="w-8 h-10 pb-2 text-emerald-600 mr-0 ml-0 md:mr-2 md:ml-2" />
+          </div> 
           <p className="text-xl bg-gradient-to-r from-gray-800 to-emerald-700 bg-clip-text text-transparent max-w-2xl mx-auto leading-relaxed ">
             A showcase of my full-stack applications built with modern technologies. 
             Click on any project to learn more about the development process.
