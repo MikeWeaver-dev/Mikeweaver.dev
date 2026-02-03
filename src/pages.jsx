@@ -192,7 +192,7 @@ export function About() {
             <p className="text-gray-600">Aspiring Software Developer</p>
           </div>
           <a 
-            href="/assets/Michael Weaver Resume.pdf" 
+            href="/assets/Resume - Michael Weaver.pdf" 
             download
             className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
@@ -528,7 +528,7 @@ export function About() {
               Send me an email
             </a>
             <a 
-              href="/assets/Michael Weaver Resume.pdf" 
+              href="/assets/Resume - Michael Weaver.pdf" 
               download
               className="px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-800 transition-all shadow-lg flex items-center justify-center gap-2"
             >
