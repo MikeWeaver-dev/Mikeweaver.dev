@@ -161,7 +161,7 @@ export function Projects() {
           </div>
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center border border-orange-200">
             <div className="text-3xl font-bold text-orange-600 mb-1">100%</div>
-            <div className="text-sm text-orange-700 font-medium">Responsive</div>
+            <div className="text-sm text-orange-700 font-medium">Custom</div>
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center border border-purple-200">
             <div className="text-3xl font-bold text-purple-600 mb-1">Open</div>
