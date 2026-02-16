@@ -55,7 +55,7 @@ export function Projects() {
       hover: "hover:text-orange-400",
       mobile: true,
       appleLink: "https://apps.apple.com/us/app/ai-chef-mobile/id6757723555",
-      playLink: "https://aichef.Mikeweaver.dev/",
+      playLink: "https://play.google.com/store/apps/details?id=dev.mikeweaver.aichef",
       icon: ChefHat
     },
     {
@@ -149,7 +149,7 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Stats Section */}
+        {/* badges for extra pretty factor*/}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
           <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center border border-green-200">
             <div className="text-3xl font-bold text-green-600 mb-1">4</div>
@@ -982,7 +982,7 @@ export function AIChef() {
       liveUrl="https://aichef.Mikeweaver.dev/"
       githubUrl="https://github.com/MikeWeaver-dev/AIChef"
       appleLink="https://apps.apple.com/us/app/ai-chef-mobile/id6757723555"
-      playLink="https://aichef.Mikeweaver.dev/"
+      playLink="https://play.google.com/store/apps/details?id=dev.mikeweaver.aichef"
       gradient="from-orange-300 to-orange-400"
       color="text-orange-600"
       softColor="bg-orange-50"
