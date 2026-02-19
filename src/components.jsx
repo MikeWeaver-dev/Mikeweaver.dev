@@ -3,7 +3,7 @@ import {useState} from "react";
 import { Code2, ChevronRight, ChevronLeft, Github, Linkedin, Mail, Menu, X, Sparkles, ExternalLink, ArrowRight, Play, Award, Rocket } from 'lucide-react';
 import { NavLink} from "react-router-dom";
 
-// header for all pages, lots of Tailwind going on here
+// header for all pages
 export function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-emerald-50 via-white to-emerald-50 backdrop-blur-md shadow-sm z-50 border-b border-emerald-100">
