@@ -156,7 +156,7 @@ export function Navbar() {
   );
 }
 
-//only really shows for desktop. I just wanted to try using a sidebar I've never done it before
+//sidebar for desktop
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
