@@ -156,7 +156,7 @@ export function Navbar() {
   );
 }
 
-//sidebar for desktop. Similar to Nav
+//sidebar available for desktop
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
