@@ -285,7 +285,7 @@ export function ProjectCard({
           </div>
         </div>
 
-        {/* Description – takes up available space */}
+        {/* Description */}
         <p className="text-gray-700 leading-relaxed mb-12 flex-grow">
           {description}
         </p>
