@@ -370,7 +370,7 @@ export function ProjectCard({
   );
 }
 
-//all the projects like heavy info page use this one.
+//all the projects use this component
 
 export function ProjectPage({
   title,
