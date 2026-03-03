@@ -513,6 +513,7 @@ export function ProjectPage({
         )}
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
+          
           {/* Full Description */}
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
             <div className="flex items-center gap-3 mb-6">
